@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="favicon.ico" rel="shortcut icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/reast.css">
+    <link rel="stylesheet" href="css/details-bag.css">
+    <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="font/iconfont-users.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/details-style.css" />
+    <!-- <script src="js/jquery-1.8.3.min.js"></script> -->
+
+    <script src="font/iconfont-users.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/zepto.js"></script>
+    <!-- <script src="js/fx.js"></script> -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/ejs.js"></script>
+    <script src="js/mock.js"></script>
+</head>
+
+<body>
+    <!-- 顶部导航条 start -->
+    <header id="top">
+        <a href="index.html" class="return iconfont"><i class="icon-fanhui iconfont"></i>
+        </a>
+        <div class="tit">
+            <div class="active tit-first">商品</div>
+            <div>评价</div>
+            <div>详情</div>
+        </div>
+        <div class="more">
+            <div class="icon-more iconfont"></div>
+            <div class="icon-guanbi iconfont"></div>
+            <!-- 隐藏导航条 start -->
+            <div class="nav-hide">
+                <ul class="nav-bar">
+                    <li>
+                        <a href="index.html">
+                            <div class="icon-index iconfont"></div>
+                            <p>首页</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <div class="icon-search iconfont"></div>
+                            <p>搜索</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="classify.html">
+                            <div class="icon-fenlei iconfont"></div>
+                            <p>分类</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cars.html">
+                            <div class="icon-cart iconfont"></div>
+                            <p>购物车</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="users.html">
+                            <div class="icon-Userpersonalinform iconfont"></div>
+                            <p>我的聚合</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 隐藏导航条 end -->
+        </div>
+    </header>
+    <!-- 顶部导航条 end -->
+
+    <!-- 商品详情 start -->
+    <div class="margin-top">
+        <!-- 图片切换 start-->
+        <div class="swiper-container imgs-tabs">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="images/details/applexsmax-500x500.jpg">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="images/details/applexsmax2-500x500.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- 图片切换 end-->
+        <div class="pricebox">
+            <div class="price">￥<span>9888.00</span></div>
+            <div class="old-price">参考价￥10999.00</div>
+        </div>
+        <div class="details-name">
+            <div class="names">【官方自营】【官方授权】Apple iPhone XS Max 256GB 金色 移动联通电信4G手机 双卡双待</div>
+            <div class="note">配备A12仿生芯片，6.5英寸OLED显示屏，1200万像素后置双镜头，支持双卡。</div>
+        </div>
+        <div class="comm-list">
+            <div>
+                <div class="comm-left">积分：</div>
+                <div class="comm-cont jifen-set">评价返积分</div>
+                <div class="comm-right"></div>
+            </div>
+        </div>
+        <div id="expressArea" class="comm-list">
+            <div>
+                <div class="comm-left">送至：</div>
+                <div id="expressArea" class="comm-cont address-set">
+                    <dl>
+                        <dd>上海市 > 市辖区 > 黄浦区</dd>
+                    </dl> 99元免基础运费（5kg内）
+                </div>
+                <div class="comm-right"></div>
+            </div>
+        </div>
+        <!--选择地区弹层-->
+        <section id="areaLayer" class="express-area-box">
+            <header>
+                <h3>选择地区</h3>
+                <a id="backUp" class="back" href="javascript:void(0)" title="返回"></a>
+                <a id="closeArea" class="close" href="javascript:void(0)" title="关闭"></a>
+            </header>
+            <article id="areaBox">
+                <ul id="areaList" class="area-list"></ul>
+            </article>
+        </section>
+        <!--遮罩层-->
+        <div id="areaMask" class="mask"></div>
+
+        <div class="comm-list click">
+            <div>
+                <div class="comm-left">服务：</div>
+                <div class="comm-cont service-set">
+                    本产品由聚合云商提供发货和售后服务
+                    <div class="service">
+                        <span>· 不支持7天无理由退货</span>
+                        <span>· 99元免基础运费（5kg内）</span>
+                    </div>
+                </div>
+                <div class="comm-right"></div>
+            </div>
+        </div>
+        <!--选择地区弹层-->
+        <section class="express-area-box pop">
+            <header>
+                <h3>服务</h3>
+                <a class="back" href="javascript:void(0)" title="返回"></a>
+                <a class="close" href="javascript:void(0)" title="关闭"></a>
+            </header>
+            <article class="scroll"">
+                <ul class=" area-list">
+                <li>
+                    <p>一、不支持7天无理由退货、不支持门店自取、支持货到付款;</p>
+                    <p>二、运费规则：99元免基础运费（5kg内）;</p>
+                    <p>三、I聚合无忧保障-七天无理由退货规则</p>
+                    <p>1、除以下商品外，网站均支持七天无理由退货。</p>
+                    <p>（一）消费者定作的商品；</p>
+                    <p>（二）鲜活易腐的商品；</p>
+                    <p>（三）在线下载或者消费者拆封的音像制品、计算机软件等数字化商品；</p>
+                    <p>（四）交付的报纸、期刊；</p>
+                    <p>2、下列性质的商品经消费者在购买时确认，可以不适用七日无理由退货规定：</p>
+                    <p>（一）拆封后易影响人身安全或者生命健康的商品，或者拆封后易导致商品品质发生改变的商品；</p>
+                    <p>（二）一经激活或者试用后价值贬损较大的商品；</p>
+                    <p>（三）销售时已明示的临近保质期的商品、有瑕疵的商品。</p>
+                    <p> 3、消费者退回的商品应当完好。</p>
+                    <p>商品能够保持原有品质、功能，商品本身、配件、商标标识齐全的，视为商品完好。</p>
+                    <p>4、对超出查验和确认商品品质、功能需要而使用商品，导致商品价值贬损较大的，视为商品不完好。具体判定标准如下：</p>
+                    <p>（一）食品（含保健食品）、化妆品、医疗器械、计生用品：必要的一次性密封包装被损坏；无一次性密封包装的化妆品暂不支持。</p>
+                    <p>（二）电子电器类、美妆个护类：进行未经授权的维修、改动，破坏、涂改强制性产品认证标志、指示标贴、机器序列号等，有难以恢复原状的外观类使用痕迹，或者产生激活、授权信息、不合理的个人使用数据留存等数据类使用痕迹；</p>
+                    <p>（三）服装、鞋帽、箱包、玩具、家纺、家居类：商标标识被摘、标识被剪，商品受污、受损。</p>
+                </li>
+                </ul>
+            </article>
+        </section>
+        <!--遮罩层-->
+        <!-- <div class="mask"></div> -->
+
+        <div class="comm-list click2">
+            <div>
+                <div class="comm-left">选择：</div>
+                <div class="comm-cont choose-set">1件</div>
+                <div class="comm-right"></div>
+            </div>
+        </div>
+        <!--选择地区弹层-->
+        <section class="express-area-box pop2">
+                <header>
+                    <h3>选择</h3>
+                    <a class="back" href="javascript:void(0)" title="返回"></a>
+                    <a class="close" href="javascript:void(0)" title="关闭"></a>
+                </header>
+                <article class="scroll"">
+                    <div class="scroll-top">
+                        <div class="num-text">数量</div>
+                        <div class="num">
+                            <div class="num-few">-</div>
+                            <input class="number" type="number" min="1" max="99" value="1">
+                            <div class="num-lot">+</div>
+                        </div>
+                    </div>
+                    <div class="scroll-bot">
+                        <div class="add-cart">
+                            <p>加入购物车</p>
+                        </div>
+                        <div class="buy">
+                            <p>立即购买</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--遮罩层-->
+            <!-- <div class="mask"></div> -->
+        <div class="comm-list">
+            <div>
+                <div class="comm-left">规格参数</div>
+                <div class="comm-cont"></div>
+                <div class="comm-right"></div>
+            </div>
+        </div>
+        <!-- 评价 -->
+        <div class="comm-list">
+            <ul class="eva-add">
+                <li class="comm-item">
+                    <div class="comm-left">评价：</div>
+                    <div class="comm-cont">100%
+                        <span>好评率</span>
+                        <p class="comm-set">（250条评论）</p>
+                    </div>
+                    <div class="comm-right"></div>
+                </li>
+                <li>
+                    <div class="eva-list">
+                        <div class="eva-left"><img src="images/details/headPic.png" alt=""></div>
+                        <div class="eva-cont">
+                            <div class="eva-cont-head">
+                                <p>186***6623</p>
+                                <div class="eva-star">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="eva-cont-text">好评！</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="eva-list">
+                        <div class="eva-left"><img src="images/details/headPic.png" alt=""></div>
+                        <div class="eva-cont">
+                            <div class="eva-cont-head">
+                                <p>186***6623</p>
+                                <div class="eva-star">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="eva-cont-text">好评！</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="show-eva">
+                    <p>查看全部评论</p>
+                </li>
+            </ul>
+            <script type="text/template" id="tpl2">
+                <%for(var k=0;k<eva.length;k++){%>
+                <li>
+                    <div class="eva-list">
+                        <div class="eva-left"><img src="images/details/headPic.png" alt=""></div>
+                        <div class="eva-cont">
+                            <div class="eva-cont-head">
+                                <p><%=eva[k].mobile%></p>
+                                <div class="eva-star">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="eva-cont-text"><%=eva[k].title%></div>
+                        </div>
+                    </div>
+                </li>
+                <%}%>
+            </script>
+        </div>
+        <!-- 评价 -->
+        <!-- 店铺 -->
+        <div class="comm-list ap-hg">
+            <div>
+                <div class="comm-left"><img src="images/details/apple-logo.jpg" alt=""></div>
+                <div class="comm-cont comm-ml">官方自营苹果旗舰店</div>
+                <div class="comm-right"></div>
+            </div>
+        </div>
+        <!-- 店铺 -->
+    </div>
+    <!-- 热门推荐 -->
+    <div class="hots-comm">
+        <div class="tit-tabs">
+            <div class="active tits-first">热门商品</div>
+            <div>买了又买</div>
+            <div>大家还在看</div>
+        </div>
+        <div class="swiper-container tabs-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <ul class="hotcomm-list">
+                    </ul>
+
+                </div>
+                <div class="swiper-slide">
+                    <ul class="hotcomm-list  tab-loads">
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <ul class="hotcomm-list  tab-loads">
+                    </ul>
+                </div>
+            </div>
+            <script type="text/template" id="tpl">
+                <%for(var i=0;i<shop.length;i++){%>
+                    <li>
+                        <a href="details.html">
+                            <div class="hotcomm-img">
+                                <img src="<%=shop[i].img%>" alt="">
+                            </div>
+                            <div class="hotcomm-tit"><%=shop[i].name%></div>
+                            <div class="hotcomm-price"><span>￥</span><%=shop[i].price%></div>
+                        </a>
+                    </li>
+                <%}%>
+            </script>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- 热门推荐 -->
+
+    <!-- 横幅广告 -->
+    <div class="ad-box">
+        <a href="广告"><img src="images/details/ad-img01.jpg" alt=""></a>
+    </div>
+    <!-- 横幅广告 -->
+
+    <!-- 详情包装 -->
+    <div class="details-switch">
+        <ul>
+            <li class="on">图文详情</li>
+            <li>包装售后</li>
+        </ul>
+    </div>
+    <!-- 详情包装 -->
+
+    <!-- 主要内容 -->
+    <div class="main-box">
+        <div class="main">
+            <img src="images/details/main.jpg" alt="">
+        </div>
+        <!-- 包装售后 -->
+        <div class="bags">
+            <div class="details-info-show" id="saleDetail">
+                <div class="details-content-list">
+                    <div class="details-content-title">
+                        <div class="title-main">
+                            <span>包装清单</span>
+                        </div>
+                    </div>
+                    <div class="details-content-main">以官网信息为准</div>
+
+                    <div class="details-content-list">
+                        <div class="details-content-title">
+                            <div class="title-main">
+                                <span>售后服务</span>
+                            </div>
+                        </div>
+                        <div class="details-content-main">本产品全国联保，享受三包服务，质保期为：全国联保一年
+                            如因质量问题或故障，凭品牌授权售后服务中心的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！ 详情致电客服电话：400-900-8800</div>
+                    </div>
+                </div>
+
+                <div class="details-content-list promiseForBailian">
+                    <div class="details-content-title">
+                        <div class="title-main">
+                            <span>百联承诺</span>
+                        </div>
+                    </div>
+                    <div class="details-content-main fonts">
+                        百联向您保证所售商品均为正品行货，请放心购买！如我们的商品不能让您满意，您可通过“帮助中心→售后服务→《退换货政策》”查询退换货相关规则及流程。
+                    </div>
+                </div>
+
+                <div class="details-content-list specialDescription">
+                    <div class="details-content-title">
+                        <div class="title-main">
+                            <span>特别说明</span>
+                        </div>
+                    </div>
+                    <div class="fonts">
+                        <p>1、因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，I百联不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！</p>
+                        <p>2、因拍摄灯光及不同显示器色差等原因造成商品图片与实物有色差，一切以实物为准。</p>
+                    </div>
+                </div>
+
+                <div class="details-content-list topWordExpire">
+                    <div class="details-content-title">
+                        <div class="title-main">
+                            <span>极限词失效协议</span>
+                        </div>
+                    </div>
+                    <div class="fonts">
+                        <p>1、本平台全力支持关于《中华人民共和国广告法》实施的“极限化违禁词”相关规定，且已竭力规避使用相关“违禁词”(如“顶级”、最佳”等极限化词汇)。</p>
+                        <p>2、故即日起凡本平台商品详情页及商品标题等含有“极限化违禁词”介绍的文字说明，一律非本平台主观意愿并即刻失效，不可用于客户作为下单购物的参考依据，不作为理赔的理由。
+                            对商品描述有疑问的可联系在线客服。</p>
+                        <p>3、凡顾客购买本平台商品并下单付款，均表示认同此条约，感谢各位顾客的配合！</p>
+                    </div>
+                </div>
+
+                <div class="details-content-list priceDescription">
+                    <div class="details-content-title">
+                        <div class="title-main">
+                            <span>价格说明</span>
+                        </div>
+                    </div>
+                    <div class="details-content-main fonts">
+                        i百联价：商品在i百联平台上，不参加降价让利促销团购等活动时的常规销售价格。
+                        <br>
+                        参考价：商品展示的参考价，可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在i百联平台曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价、销售商门店曾经展示过的销售价等可能会与您购物时展示的不一致，该价格仅供您参考。
+                        <br>
+                        折扣：如无特殊说明，折扣指销售商在原价、或参考价（如品牌专柜标价、商品吊牌价、厂商指导价、厂商建议零售价）等某一价格基础上计算出的优惠比例或优惠金额；折扣比例采取四舍五入方法保留一位小数点，如闪购价为3000元，参考价为3400元，折扣展示为8.8折（3000/3400≈0.882）；闪购价为3000元，参考价为3300元，折扣展示为9.1折（3000/3300≈0.909）。如有疑问，您可在购买前联系销售商进行咨询。
+                        <br>
+                        异常问题：商品促销信息以商品详情页"促销"栏中的信息为准;商品的具体售价以订单结算页价格为准;如您发现活动商品售价或促销信息有异常,建议在购买前联系客服咨询。
+                    </div>
+                </div>
+
+                <div class="details-content-list supplementDescription">
+                    <div class="fonts">
+                        <ul class="details-ul">
+                            <li>
+                                <div class="ul-title"><i><img src="images/details/details-icon-1.png"></i>正品保证:</div>
+                                <div class="ul-content">i百联保证所售商品均为正品行货，i百联自营商品可开具机打发票或电子发票。</div>
+                            </li>
+                            <li>
+                                <div class="ul-title"><i><img src="images/details/details-icon-2.png"></i>精选品牌:</div>
+                                <div class="ul-content">迄今为止，已有超过20,000多个国内外品牌入驻i百联，涵盖流行百货、潮流服饰、品质家电、大牌美妆、优质家纺、母婴用品、精选食品等多种品类。</div>
+                            </li>
+                            <li>
+                                <div class="ul-title"><i><img src="images/details/details-icon-3.png"></i>多种支付方式:</div>
+                                <div class="ul-content">全站放心买，支付安心用！百联卡、OK卡、微信、支付宝、银联随心付，优惠折上折！</div>
+                            </li>
+                            <li>
+                                <div class="ul-title"><i><img src="images/details/details-icon-4.png"></i>快速配送:</div>
+                                <div class="ul-content">专业的仓储管理系统，全流水线无缝衔接，完善的服务保障体系，全程可视化追踪，确保包裹以最快的方式送到顾客的手中。</div>
+                            </li>
+                            <li>
+                                <div class="ul-title"><i><img src="images/details/details-icon-5.png"></i>金牌客服:</div>
+                                <div class="ul-content">365天客服热线，7*12小时品质服务，7*24小时智能问答，用我们的热诚和坦诚为客户提供个性又贴心的服务，让顾客满意是我们永远不变的宗旨。</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- 包装售后 -->
+    </div>
+    <!-- 主要内容 -->
+
+
+    <!-- 商品详情 end -->
+
+    <!-- 返回顶部按钮 -->
+    <div class="go-top">
+        <!-- <a href="#top2"></a> -->
+    </div>
+    <!-- 返回顶部按钮 -->
+    <!-- 加入购物车成功 -->
+    <div class="sue-car">
+        加入购物车成功
+    </div>
+    <!-- 加入购物车成功 -->
+    <!-- 结尾 -->
+    <footer>
+        <div class="cost ft-left">
+            <img src="images/details/service.png" alt="">
+            <p>客服</p>
+        </div>
+        <div class="follow ft-left">
+            <a href="my-collect.html">
+                <img src="images/details/support.png" alt="">
+                <p>已关注</p>
+            </a>
+        </div>
+        <div class="show-cart ft-left">
+            <a href="cars.html">
+                <i>0</i>
+                <img src="images/details/car.png" alt="">
+                <p>购物车</p>
+            </a>
+        </div>
+        <div class="add-cart ft-right">
+            <p>加入购物车</p>
+        </div>
+        <div class="buy ft-right">
+            <p>立即购买</p>
+        </div>
+    </footer>
+</body>
+<script src="js/device.js"></script>
+<script src="js/jquery.area.js"></script>
+<script src="js/details.js"></script>
+<script src="js/gohistory.js"></script>
+<script src="js/more.js"></script>
+
+
+</html>

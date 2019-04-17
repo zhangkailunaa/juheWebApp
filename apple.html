@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="favicon.ico" rel="shortcut icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apple自营旗舰店</title>
+    <link rel="stylesheet" href="css/reast.css">
+    <link rel="stylesheet" href="css/apple.css">
+    <link rel="stylesheet" href="font/iconfont-users.css">
+    <script src="js/zepto.js"></script>
+    <script src="font/iconfont-users.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/ejs.js"></script>
+    <script src="js/mock.js"></script>
+    <script src="js/iscroll-probe.js"></script> 
+</head>
+
+<body>
+    <!-- 顶部导航条 start -->
+    <header id="top">
+        <div class="head">
+            <a href="index.html" class="return iconfont"><i class="icon-fanhui iconfont"></i>
+            </a>
+            <div class="search-box">
+                <input type="text" class="search" placeholder="搜索店铺商品">
+                <a href="classify.html"><i class="icon-fenlei  iconfont"></i></a>
+            </div>
+            <div class="more">
+                <div class="icon-more iconfont"></div>
+                <div class="icon-guanbi iconfont"></div>
+                <!-- 隐藏导航条 start -->
+                <div class="nav-hide">
+                    <ul class="nav-bar">
+                        <li>
+                            <a href="index.html">
+                                <div class="icon-index iconfont"></div>
+                                <p>首页</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="search.html">
+                                <div class="icon-search iconfont"></div>
+                                <p>搜索</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="classify.html">
+                                <div class="icon-fenlei iconfont"></div>
+                                <p>分类</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cart.html">
+                                <div class="icon-cart iconfont"></div>
+                                <p>购物车</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="users.html">
+                                <div class="icon-Userpersonalinform iconfont"></div>
+                                <p>我的聚合</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 隐藏导航条 end -->
+            </div>
+        </div>
+
+        <div class="aptit">
+            <div class="aptit-img"><img src="images/apple/apple-logo.jpg" alt=""></div>
+            <div class="aptit-text">
+                <p>i聚合Apple产品专营店</p>
+                <span>自营</span>
+            </div>
+        </div>
+
+        <div class="head-tab">
+            <ul class="apindex">
+                <li class="active">店铺首页</li>
+                <li>全部商品</li>
+                <li>热销</li>
+                <li>上新</li>
+            </ul>
+        </div>
+    </header>
+    <!-- 顶部导航条 end -->
+
+    <!-- 店铺主要内容 start -->
+    <main>
+        <div class="fr-index">
+            <div class="head-banner"><img src="images/apple/banner01.jpg" alt=""></div>
+
+            <div class="scene">
+                <h2>场景推荐</h2>
+                <ul class="scene-list">
+                    <li><img src="images/apple/scene01.jpg" alt=""></li>
+                    <li><img src="images/apple/scene02.jpg" alt=""></li>
+                    <li><img src="images/apple/scene03.jpg" alt=""></li>
+                </ul>
+            </div>
+
+            <div class="floor-box">
+                <div class="floor">
+                    <div class="floor-head">
+                        <div class="floor-tit">
+                            <h2>iPhone</h2>
+                            <span>更多选择 ></span>
+                        </div>
+                        <div class="floor-img"><img src="images/apple/floor-banner01.jpg" alt=""></div>
+                    </div>
+
+                    <div class="product">
+                        <ul class="product-list">
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/ap01_220x220.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple iPhone XS Max 256GB 金色 移动联通电信4G手机 双卡双待</div>
+                                    <div class="pro-price"><span>￥</span>9888</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/ap02_220x220.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple iPhone XS Max 64GB 银色 移动联通电信4G手机 双卡双待</div>
+                                    <div class="pro-price"><span>￥</span>8888</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/ap03_220x220.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple iPhone XS Max 256GB 银色 移动联通电信4G手机 双卡双待</div>
+                                    <div class="pro-price"><span>￥</span>9988</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/ap04_220x220.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple iPhone XS Max 64GB 深空灰色 移动联通电信4G手机 双卡双待</div>
+                                    <div class="pro-price"><span>￥</span>8788</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="floor">
+                    <div class="floor-head">
+                        <div class="floor-tit">
+                            <h2>iPad</h2>
+                            <span>更多选择 ></span>
+                        </div>
+                        <div class="floor-img"><img src="images/apple/iPad.webp" alt=""></div>
+                    </div>
+
+                    <div class="product">
+                        <ul class="product-list">
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/ipad01.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple iPad mini 4 7.9英寸平板电脑 128G WLAN 机型 金色 MK9Q2CH/A</div>
+                                    <div class="pro-price"><span>￥</span>2788</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/ipad02.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple iPad Pro 10.5英寸平板电脑 WI-FI 64GB 玫瑰金色 MQDY2CH/A</div>
+                                    <div class="pro-price"><span>￥</span>4788</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/ipad03.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple 新款9.7英寸 iPad平板电脑 128G 无线局域网 机型 MR7J2CH/A 深空灰色</div>
+                                    <div class="pro-price"><span>￥</span>3098</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/ipad04.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple 新款9.7英寸 iPad平板电脑 32G 无线局域网 机型 MRJN2CH/A 金色</div>
+                                    <div class="pro-price"><span>￥</span>2398</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="floor">
+                    <div class="floor-head">
+                        <div class="floor-tit">
+                            <h2>iMac</h2>
+                            <span>更多选择 ></span>
+                        </div>
+                        <div class="floor-img"><img src="images/apple/imac.webp" alt=""></div>
+                    </div>
+
+                    <div class="product">
+                        <ul class="product-list">
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/imac01.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】新款Apple MacBook Air 13.3英寸笔记本电脑 MREE2CH/A 金色</div>
+                                    <div class="pro-price"><span>￥</span>8688</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/ipad02.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】新款Apple MacBook Air 13.3英寸笔记本电脑 MREE2CH/A 金色</div>
+                                    <div class="pro-price"><span>￥</span>13288</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/imac03.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】新款Apple MacBook Air 13.3英寸笔记本电脑 MREE2CH/A 金色</div>
+                                    <div class="pro-price"><span>￥</span>11088</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/imac03.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple MacBook Pro MPXU2CH/A 13.3英寸笔记本电脑 银色</div>
+                                    <div class="pro-price"><span>￥</span>10888</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="floor">
+                    <div class="floor-head">
+                        <div class="floor-tit">
+                            <h2>iWatch</h2>
+                            <span>更多选择 ></span>
+                        </div>
+                        <div class="floor-img"><img src="images/apple/watch.webp" alt=""></div>
+                    </div>
+
+                    <div class="product">
+                        <ul class="product-list">
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/iwatch01.jpg" alt=""> </div>
+                                    <div class="pro-tit">Apple Watch Series 4 GPS+蜂窝网络款 40毫米金色铝金属表壳 粉砂色运动型表带智能手表 MTVG2CH/A</div>
+                                    <div class="pro-price"><span>￥</span>3888</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/iwatch02.jpg" alt=""> </div>
+                                    <div class="pro-tit">Apple Watch Series 4 GPS款 44毫米深空灰色铝金属表壳 黑色运动型表带智能手表 MU6D2CH/A</div>
+                                    <div class="pro-price"><span>￥</span>3368</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/iwatch03.jpg" alt=""> </div>
+                                    <div class="pro-tit">Apple Watch Series 4 GPS款 44毫米深空灰色铝金属表壳 黑色运动型表带智能手表 MU6D2CH/A</div>
+                                    <div class="pro-price"><span>￥</span>4168</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/iwatch04.jpg" alt=""> </div>
+                                    <div class="pro-tit">Apple Watch Series 4 GPS+蜂窝网络款 40毫米金色铝金属表壳 粉砂色运动型表带智能手表 MTVG2CH/A</div>
+                                    <div class="pro-price"><span>￥</span>4188</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="floor">
+                    <div class="floor-head">
+                        <div class="floor-tit">
+                            <h2>Beats</h2>
+                            <span>更多选择 ></span>
+                        </div>
+                        <div class="floor-img"><img src="images/apple/beats.webp" alt=""></div>
+                    </div>
+
+                    <div class="product">
+                        <ul class="product-list">
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/beats01.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Beats Solo3 Wireless 头戴式 蓝牙无线耳机 手机耳机 游戏耳机 - 桀骜黑红（十周年版） MRQC2PA/A</div>
+                                    <div class="pro-price"><span>￥</span>1588</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/beats02.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Beats urBeats3 入耳式耳机 - 桀骜黑红（十周年版） 3.5mm接口 手机耳机 三键线控 带麦</div>
+                                    <div class="pro-price"><span>￥</span>658</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/beats03.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Beats Powerbeats3 by Dr. Dre Wireless 入耳式耳机 - 桀骜黑红（十周年版） MRQ92PA/A</div>
+                                    <div class="pro-price"><span>￥</span>1098</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/beats04.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Beats Studio3 Wireless 录音师无线3 头戴式 蓝牙无线降噪耳机 游戏耳机 - 桀骜黑红（十周年版）MRQ82PA/A</div>
+                                    <div class="pro-price"><span>￥</span>1988</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="floor">
+                    <div class="floor-head">
+                        <div class="floor-tit">
+                            <h2>配件</h2>
+                            <span>更多选择 ></span>
+                        </div>
+                        <div class="floor-img"><img src="images/apple/peijian.webp" alt=""></div>
+                    </div>
+
+                    <div class="product">
+                        <ul class="product-list">
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/pj01.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple Pencil MK0C2CH/A 适用于 iPad Pro 2018款iPad</div>
+                                    <div class="pro-price"><span>￥</span>748</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/pj02.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple 新款无线蓝牙鼠标（白）MLA02CH/A Magic Mouse 2</div>
+                                    <div class="pro-price"><span>￥</span>568</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/pj03.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple 原装半入耳式线控耳机EarPods（带麦克风） MMTN2FE/A 采用 Lightning 接头</div>
+                                    <div class="pro-price"><span>￥</span>228</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pro-box">
+                                    <div class="pro-img"><img src="images/apple/pj04.jpg" alt=""> </div>
+                                    <div class="pro-tit">【官方授权】Apple AirPods无线原装蓝牙耳机 MMEF2CH/A</div>
+                                    <div class="pro-price"><span>￥</span>1188</div>
+                                    <div class="pro-cart"><a href="details.html">加购物车</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="all-comm"><div class="product wrapper"><ul class="product-list"></ul></div></div>
+        <div class="hot-comm"><div class="product wrapper"><ul class="product-list"></ul></div></div>
+        <div class="new-comm"><div class="product wrapper"><ul class="product-list"></ul></div></div>
+        <script type="text/template" id="tpl">
+            <%for(var i=0;i<shop.length;i++){%>
+                <li>
+                    <div class="pro-box">
+                        <div class="pro-img"><img src="<%=shop[i].img%>" alt=""> </div>
+                        <div class="pro-tit"><%=shop[i].name%></div>
+                        <div class="pro-price"><span>￥</span><%=shop[i].price%></div>
+                    </div>
+                </li>
+            <%}%>
+        </script>
+    </main>
+    <!-- 加载动画 -->
+    <div class="loading"></div>
+    <!-- 店铺主要内容 end -->
+
+    <!-- 结尾 start -->
+    <footer>
+        <div class="last-box">
+            <span>热门活动</span>
+        </div>
+    </footer>
+    <!-- 结尾 end -->
+</body>
+<script src="js/device.js"></script>
+<script src="js/apple.js"></script>
+<script src="js/more.js"></script>
+<script src="js/gohistory.js"></script>
+</html>

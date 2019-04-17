@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="favicon.ico" rel="shortcut icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="css/reast.css">
+    <link rel="stylesheet" href="css/users.css">
+    <link rel="stylesheet" href="font/iconfont-users.css">
+    <script src="js/zepto包含动画版.js"></script>
+    <script src="font/iconfont-users.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/cookie.js"></script>
+</head>
+
+<body>
+    <!-- 顶部导航条 start -->
+    <header id="top">
+        <a href="index.html" class="return iconfont"><i class="icon-fanhui iconfont"></i>
+        </a>
+        <div class="tit">
+            <div>个人中心</div>
+        </div>
+        <div class="more">
+            <div class="icon-more iconfont"></div>
+            <div class="icon-guanbi iconfont"></div>
+            <!-- 隐藏导航条 start -->
+            <div class="nav-hide">
+                <ul class="nav-bar">
+                    <li>
+                        <a href="index.html">
+                            <div class="icon-index iconfont"></div>
+                            <p>首页</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <div class="icon-search iconfont"></div>
+                            <p>搜索</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="classify.html">
+                            <div class="icon-fenlei iconfont"></div>
+                            <p>分类</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html">
+                            <div class="icon-cart iconfont"></div>
+                            <p>购物车</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="users.html">
+                            <div class="icon-Userpersonalinform iconfont"></div>
+                            <p>我的聚合</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 隐藏导航条 end -->
+        </div>
+    </header>
+    <!-- 顶部导航条 end -->
+
+    <!-- 个人信息 start -->
+    <div id="mine">
+        <div class="login-out">
+            <a href="setting.html" class="setting">
+                <div></div>
+            </a>
+            <a href="login.html" class="login-bar">
+                <div class="head">
+                    <div></div>
+                </div>
+                <div class="login-btn"><span>登录/注册</span></div>
+            </a>
+        </div>
+        <div class="login-in">
+            <a href="my-setting.html" class="setting">
+                <div></div>
+            </a>
+            <div class="login-bar">
+                <a href="my-setting.html" class="head">
+                    <div></div>
+                </a>
+                <div class="login-btn">
+                    <span class="user-name"></span>
+                    <p>普卡会员<img src="images/users/vip.png" alt=""></p>
+                </div>
+            </div>
+            <a href="my-coupon.html" class="core">
+                <p>成长值0</p>
+                <p>差500可领福利</p>
+            </a>
+            <a href="my-coupon.html" class="level">
+                <div class="level-left">普卡</div>
+                <div class="level-line"><img src="images/users/gift-logo.png" alt=""></div>
+                <div class="level-right">银卡</div>
+            </a>
+        </div>
+    </div>
+    <!-- 个人信息 end -->
+
+    <!-- 个人收藏 start -->
+    <div class="collect">
+        <div class="coll-out">
+            <a href="my-collect.html" class="my-coll">
+                <div></div>
+                <p class="mys-txt1">我的收藏</p>
+                <p class="mys-txt2">您还没有收藏</p>
+            </a>
+            <a href="my-coupon.html" class="my-coupon">
+                <div></div>
+                <p class="mys-txt1">我的福利</p>
+                <p class="mys-txt2">海量优惠券</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- 个人收藏 end -->
+
+    <!-- 个人主要信息 start -->
+    <main>
+        <!-- 个人钱包 start -->
+        <div class="my-money">
+            <ul class="money">
+                <li>
+                    <a href="my-coupon.html">
+                        <div>0</div>
+                        <p>积分</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-coupon.html">
+                        <div>0</div>
+                        <p>优惠券</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-coupon.html">
+                        <div>0</div>
+                        <p>电子卡</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-coupon.html">
+                        <div><img src="images/users/pay.png" alt=""></div>
+                        <p>会员支付</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-wallet.html" class="wallet left-line">
+                        <div><img src="images/users/mywallet.png" alt=""></div>
+                        <p>我的钱包</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 个人钱包 end -->
+
+        <!-- 个人订单 start-->
+        <div class="my-order">
+            <ul class="money">
+                <li>
+                    <a href="待付款">
+                        <div><img src="images/users/waittopay.png" alt=""></div>
+                        <p>待付款</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="待收货">
+                        <div><img src="images/users/waittorec.png" alt=""></div>
+                        <p>待收货</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="待评价">
+                        <div><img src="images/users/waittocom.png" alt=""></div>
+                        <p>待评价</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="售后">
+                        <div><img src="images/users/service2.png" alt=""></div>
+                        <p>售后</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-order.html" class="wallet left-line">
+                        <div><img src="images/users/myorders.png" alt=""></div>
+                        <p>我的订单</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 个人订单 end-->
+    </main>
+    <!-- 个人主要信息 end -->
+
+    <!-- 结尾导航条 start -->
+    <footer>
+        <ul>
+            <li>
+                <a href="index.html">
+                    <img src="./images/public/index.png">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="classify.html">
+                    <img src="./images/public/classify.png">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="cars.html">
+                    <img src="./images/public/cart.png">
+                    <p class="wid">购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="users.html">
+                    <img src="./images/public/my.png">
+                    <span>我的</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <!-- 结尾导航条 end -->
+
+</body>
+<script src="js/device.js"></script>
+<script src="js/users.js"></script>
+<script src="js/more.js"></script>
+<script src="js/gohistory.js"></script>
+</html>

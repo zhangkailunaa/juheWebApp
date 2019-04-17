@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>register</title>
+    <link rel="stylesheet" href="css/reast.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <div class="title">
+                <img src="images/logo-web.png" alt="">
+                账号注册
+            </div>
+        </header>
+        <main>
+            <div class="join">
+                <ul>
+                    <li>
+                        <div class="join-input">
+                            <input type="text" maxlength="11" placeholder="请输入手机号码" class="iphone">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="join-input">
+                            <input type="text" maxlength="11" placeholder="请输入验证码" class="valcode vercode">
+                            <div id="verificationCode" class="verificationCode">
+                                <canvas width="100" height="40" id="verifyCanvas"></canvas>
+                                <img id="code_img">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="join-input">
+                            <input type="text" maxlength="11" placeholder="请输入短信验证码" class="valcode">
+                            <button>获取短信验证码</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="join-input">
+                            <input type="password" maxlength="11" placeholder="请输入密码(8~20位数字字母组合)" class="password">
+                        </div>
+                    </li>
+                </ul>
+                <div class="bottom">
+                    <input type="checkbox" class="selectbox">
+                    <label class="tip">我已阅读并同意以下协议</label>
+
+                </div>
+            </div>
+
+        </main>
+        <div class="submitBind">
+            <input type="button" value="注 册" class="submit">
+        </div>
+        <div class=" err"></div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="js/zepto.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="js/mui.js"></script>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/valcode.js"></script>
+</body>
+
+</html>
